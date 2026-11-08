@@ -1,0 +1,194 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Anissa Bernhard",
+    "email": "dr.anissa.bernhard@gmail.com",
+    "phone": "+1 (212) 659-8555",
+    "specialization": "Cardiology",
+    "consultationFee": 800
+  },
+  {
+    "id": 2,
+    "name": "Dr. Idella Collier",
+    "email": "dr.idella.collier@yahoo.com",
+    "phone": "+91 98490 22334",
+    "specialization": "Dermatology",
+    "consultationFee": 600
+  },
+  {
+    "id": 3,
+    "name": "Dr. Hank Weissnat",
+    "email": "dr.hank.weissnat@bing.com",
+    "phone": "+44 20 7405 9200",
+    "specialization": "Pediatrics",
+    "consultationFee": 500
+  },
+  {
+    "id": 4,
+    "name": "Dr. Moriah Hilpert-Rau",
+    "email": "dr.moriah.hilpertrau@yahoo.co.in",
+    "phone": "+49 30 450 50",
+    "specialization": "Neurology",
+    "consultationFee": 1000
+  },
+  {
+    "id": 5,
+    "name": "Dr. Manley Christiansen",
+    "email": "dr.manley.christiansen@gmail.in",
+    "phone": "+61 3 9342 7000",
+    "specialization": "Orthopedics",
+    "consultationFee": 700
+  },
+  {
+    "id": 6,
+    "name": "Dr. Crystal Emmerich",
+    "email": "dr.crystal.emmerich@yahoo.in",
+    "phone": "+1 (416) 340-4800",
+    "specialization": "General Medicine",
+    "consultationFee": 500
+  },
+  {
+    "id": 7,
+    "name": "Dr. Julio Schuster",
+    "email": "dr.julio.schuster@gmail.com",
+    "phone": "+65 6222 3322",
+    "specialization": "ENT",
+    "consultationFee": 500
+  },
+  {
+    "id": 8,
+    "name": "Dr. Shyann Corkery",
+    "email": "dr.shyann.corkery@yahoo.com",
+    "phone": "+33 1 56 09 20 00",
+    "specialization": "Gynecology",
+    "consultationFee": 500
+  },
+  {
+    "id": 9,
+    "name": "Dr. Angelo Kertzmann",
+    "email": "dr.angelo.kertzmann@bing.com",
+    "phone": "+81 3 3815 5411",
+    "specialization": "Cardiology",
+    "consultationFee": 800
+  },
+  {
+    "id": 10,
+    "name": "Dr. Lilliana Mitchell",
+    "email": "dr.lilliana.mitchell@yahoo.co.in",
+    "phone": "+91 98112 33445",
+    "specialization": "Dermatology",
+    "consultationFee": 600
+  },
+  {
+    "id": 11,
+    "name": "Dr. Sunny Conroy",
+    "email": "dr.sunny.conroy@gmail.in",
+    "phone": "+1 (310) 423-3277",
+    "specialization": "Gastroenterology",
+    "consultationFee": 500
+  },
+  {
+    "id": 12,
+    "name": "Dr. Alberto Swaniawski",
+    "email": "dr.alberto.swaniawski@yahoo.in",
+    "phone": "+44 20 3299 9000",
+    "specialization": "Pulmonology",
+    "consultationFee": 500
+  },
+  {
+    "id": 13,
+    "name": "Dr. Rosalee Mann",
+    "email": "dr.rosalee.mann@gmail.com",
+    "phone": "+49 89 4400 0",
+    "specialization": "Cardiology",
+    "consultationFee": 800
+  },
+  {
+    "id": 14,
+    "name": "Dr. Margarete Feil",
+    "email": "dr.margarete.feil@yahoo.com",
+    "phone": "+61 2 9515 6111",
+    "specialization": "Dermatology",
+    "consultationFee": 600
+  },
+  {
+    "id": 15,
+    "name": "Dr. Bryon Kemmer",
+    "email": "dr.bryon.kemmer@bing.com",
+    "phone": "+1 (514) 934-1934",
+    "specialization": "Pediatrics",
+    "consultationFee": 500
+  },
+  {
+    "id": 16,
+    "name": "Dr. Avis Pfeffer",
+    "email": "dr.avis.pfeffer@yahoo.co.in",
+    "phone": "+65 6779 5555",
+    "specialization": "Neurology",
+    "consultationFee": 1000
+  },
+  {
+    "id": 17,
+    "name": "Dr. Lew Jakubowski",
+    "email": "dr.lew.jakubowski@gmail.in",
+    "phone": "+971 2 659 9999",
+    "specialization": "Orthopedics",
+    "consultationFee": 700
+  },
+  {
+    "id": 18,
+    "name": "Dr. Marianne Towne",
+    "email": "dr.marianne.towne@yahoo.in",
+    "phone": "+34 93 227 5400",
+    "specialization": "General Medicine",
+    "consultationFee": 500
+  },
+  {
+    "id": 19,
+    "name": "Dr. Jamir Parker-Kozey",
+    "email": "dr.jamir.parkerkozey@gmail.com",
+    "phone": "+39 06 49971",
+    "specialization": "ENT",
+    "consultationFee": 500
+  },
+  {
+    "id": 20,
+    "name": "Dr. Jerome Hickle",
+    "email": "dr.jerome.hickle@yahoo.com",
+    "phone": "+81 75 751 3111",
+    "specialization": "Gynecology",
+    "consultationFee": 500
+  },
+  {
+    "id": 21,
+    "name": "Dr. Kobe Koepp",
+    "email": "dr.kobe.koepp@bing.com",
+    "phone": "+91 98801 77889",
+    "specialization": "Ophthalmology",
+    "consultationFee": 500
+  },
+  {
+    "id": 22,
+    "name": "Dr. Johnpaul Friesen",
+    "email": "dr.johnpaul.friesen@yahoo.co.in",
+    "phone": "+1 (410) 955-5000",
+    "specialization": "Endocrinology",
+    "consultationFee": 1500
+  },
+  {
+    "id": 23,
+    "name": "Dr. Jaleel Boehm",
+    "email": "dr.jaleel.boehm@gmail.in",
+    "phone": "+44 20 7377 7000",
+    "specialization": "Gastroenterology",
+    "consultationFee": 500
+  },
+  {
+    "id": 24,
+    "name": "Dr. Margarett Haag",
+    "email": "dr.margarett.haag@yahoo.in",
+    "phone": "+91 98103 44556",
+    "specialization": "Pulmonology",
+    "consultationFee": 500
+  }
+]

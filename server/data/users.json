@@ -1,0 +1,26 @@
+[
+  {
+    "id": "demo-patient",
+    "role": "Patient",
+    "name": "Toby Deckow",
+    "email": "toby.deckow@gmail.com",
+    "patientId": 1,
+    "label": "Patient: Toby Deckow"
+  },
+  {
+    "id": "demo-doctor",
+    "role": "Doctor",
+    "name": "Dr. Anissa Bernhard",
+    "email": "dr.anissa.bernhard@gmail.com",
+    "doctorId": 1,
+    "specialization": "Cardiology",
+    "label": "Dr. Anissa Bernhard (Cardiology)"
+  },
+  {
+    "id": "demo-admin",
+    "role": "Admin",
+    "name": "Clinic Administrator",
+    "email": "admin.cliniccare@gmail.com",
+    "label": "System Administrator"
+  }
+]

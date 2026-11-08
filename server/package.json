@@ -1,0 +1,18 @@
+{
+  "name": "clinic-appointment-server",
+  "description": "Express REST API and persistent JSON data services for the Clinic Appointment System.",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node scripts/seedData.js && node scripts/expandDemoData.js",
+    "seed:expand": "node scripts/expandDemoData.js"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.5.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

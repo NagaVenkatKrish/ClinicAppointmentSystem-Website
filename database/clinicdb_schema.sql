@@ -1,0 +1,26 @@
+CREATE DATABASE IF NOT EXISTS ClinicDB;
+USE ClinicDB;
+
+CREATE TABLE IF NOT EXISTS Patient (
+  PatientID INT PRIMARY KEY AUTO_INCREMENT,
+  FirstName VARCHAR(50) NOT NULL,
+  LastName VARCHAR(50) NOT NULL,
+  Phone VARCHAR(15) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Doctor (
+  DoctorID INT PRIMARY KEY AUTO_INCREMENT,
+  Name VARCHAR(100) NOT NULL,
+  Specialization VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Appointment (
+  AppointmentID INT PRIMARY KEY AUTO_INCREMENT,
+  PatientID INT NOT NULL,
+  DoctorID INT NOT NULL,
+  AppointmentDate DATE NOT NULL,
+  AppointmentTime TIME NOT NULL,
+  Status ENUM('Scheduled', 'Completed', 'Cancelled') DEFAULT 'Scheduled',
+  FOREIGN KEY (PatientID) REFERENCES Patient(PatientID),
+  FOREIGN KEY (DoctorID) REFERENCES Doctor(DoctorID)
+);

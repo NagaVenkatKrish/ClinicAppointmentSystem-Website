@@ -1,0 +1,884 @@
+/* ============================================
+   Clinic Appointment System — Design Tokens
+   ============================================ */
+:root {
+  /* Primary palette */
+  --clinic-primary: #0b7285;
+  --clinic-primary-light: #e6f7fa;
+  --clinic-primary-dark: #065a6b;
+  --clinic-primary-rgb: 11, 114, 133;
+
+  /* Accent */
+  --clinic-teal: #0f766e;
+  --clinic-teal-light: #f0fdfa;
+
+  /* Neutrals */
+  --clinic-bg: #f6f8fa;
+  --clinic-surface: #ffffff;
+  --clinic-border: #e2e8f0;
+  --clinic-border-hover: #cbd5e1;
+  --clinic-text: #1e293b;
+  --clinic-text-secondary: #64748b;
+  --clinic-text-muted: #94a3b8;
+
+  /* Semantic */
+  --clinic-success: #16a34a;
+  --clinic-success-bg: #dcfce7;
+  --clinic-warning: #d97706;
+  --clinic-warning-bg: #fef3c7;
+  --clinic-danger: #dc2626;
+  --clinic-danger-bg: #fee2e2;
+  --clinic-info: #0284c7;
+  --clinic-info-bg: #e0f2fe;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.06), 0 4px 6px rgba(0, 0, 0, 0.04);
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  /* Editorial Typography Tokens */
+  --clinic-font-heading: 'Newsreader', 'Plus Jakarta Sans', Georgia, serif;
+  --clinic-font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Bootstrap overrides */
+  --bs-primary: #0b7285;
+  --bs-primary-rgb: 11, 114, 133;
+  --bs-body-bg: #f6f8fa;
+  --bs-body-color: #1e293b;
+}
+
+/* ============================================
+   Base
+   ============================================ */
+body {
+  background-color: var(--clinic-bg);
+  color: var(--clinic-text);
+  font-family: var(--clinic-font-sans);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+h1, h2, h3 {
+  font-family: var(--clinic-font-heading);
+  color: var(--clinic-text);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+h4, h5, h6 {
+  font-family: var(--clinic-font-sans);
+  color: var(--clinic-text);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.text-clinic-primary {
+  color: var(--clinic-primary) !important;
+}
+
+/* ============================================
+   Navbar
+   ============================================ */
+.navbar-clinic {
+  background-color: var(--clinic-surface);
+  border-bottom: 1px solid var(--clinic-border);
+  box-shadow: var(--shadow-xs);
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.navbar-clinic .nav-link {
+  color: var(--clinic-text-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: var(--radius-sm);
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.navbar-clinic .nav-link:hover {
+  color: var(--clinic-primary);
+  background-color: var(--clinic-primary-light);
+}
+
+.navbar-clinic .nav-link.active {
+  color: var(--clinic-primary) !important;
+  background-color: var(--clinic-primary-light);
+  font-weight: 600;
+}
+
+.brand-icon {
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(135deg, var(--clinic-primary), var(--clinic-teal));
+  color: white;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   Cards
+   ============================================ */
+.card {
+  border: 1px solid var(--clinic-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  background-color: var(--clinic-surface);
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-header {
+  background-color: var(--clinic-surface);
+  border-bottom: 1px solid var(--clinic-border);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0 !important;
+}
+
+/* ============================================
+   Stat / Dashboard Cards
+   ============================================ */
+.stat-card {
+  border-left: 4px solid var(--clinic-primary);
+  border-radius: var(--radius-lg);
+}
+
+.stat-card.stat-primary { border-left-color: var(--clinic-primary); }
+.stat-card.stat-success { border-left-color: var(--clinic-success); }
+.stat-card.stat-warning { border-left-color: var(--clinic-warning); }
+.stat-card.stat-danger  { border-left-color: var(--clinic-danger); }
+.stat-card.stat-dark    { border-left-color: #334155; }
+.stat-card.stat-secondary { border-left-color: var(--clinic-text-secondary); }
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.stat-icon .bi {
+  display: block;
+  line-height: 1;
+}
+
+.stat-icon-primary { background-color: #dbeafe; color: #1d4ed8; }
+.stat-icon-success { background-color: #d1fae5; color: #047857; }
+.stat-icon-warning { background-color: #fef3c7; color: #b45309; }
+.stat-icon-danger { background-color: #fee2e2; color: #b91c1c; }
+.stat-icon-info { background-color: #e0f2fe; color: #0369a1; }
+.stat-icon-dark { background-color: #e2e8f0; color: #334155; }
+.stat-icon-secondary { background-color: #e2e8f0; color: #475569; }
+.stat-icon-light { background-color: #f1f5f9; color: #475569; }
+.stat-icon-teal { background-color: var(--clinic-teal-light); color: var(--clinic-teal); }
+
+.stat-card .card-body > div:first-child {
+  min-width: 0;
+}
+
+/* Data-driven dashboard insights */
+.insight-card {
+  border-color: #dbe5e8;
+  overflow: hidden;
+}
+
+.insight-kicker {
+  display: block;
+  color: var(--clinic-text-muted);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  margin-bottom: 0.3rem;
+}
+
+.insight-total {
+  color: var(--clinic-primary-dark);
+  font-size: 1.4rem;
+  font-weight: 750;
+  letter-spacing: -0.04em;
+}
+
+.insight-total small {
+  color: var(--clinic-text-muted);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.activity-chart {
+  display: grid;
+  grid-template-columns: repeat(14, minmax(20px, 1fr));
+  align-items: end;
+  gap: 0.45rem;
+  min-height: 174px;
+  padding-top: 0.75rem;
+}
+
+.activity-day {
+  display: grid;
+  grid-template-rows: 1rem 1fr 1rem;
+  gap: 0.35rem;
+  height: 150px;
+  text-align: center;
+  min-width: 0;
+}
+
+.activity-count,
+.activity-label {
+  color: var(--clinic-text-secondary);
+  font-size: 0.62rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.activity-label-muted {
+  color: transparent;
+}
+
+.activity-track {
+  display: flex;
+  align-items: end;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 6px 6px 2px 2px;
+  background: #f1f5f9;
+}
+
+.activity-bar {
+  width: 100%;
+  min-height: 3px;
+  border-radius: 6px 6px 2px 2px;
+  background: linear-gradient(180deg, #27a4a5, var(--clinic-primary));
+  transition: height 0.25s ease;
+}
+
+.specialty-row + .specialty-row {
+  margin-top: 0.8rem;
+}
+
+.specialty-track {
+  height: 6px;
+  border-radius: 99px;
+  background: #eef2f5;
+  overflow: hidden;
+}
+
+.specialty-track > div {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #27a4a5, var(--clinic-primary));
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.activity-date-tile {
+  width: 48px;
+  min-width: 48px;
+  padding: 0.35rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #d9e9ed;
+  border-radius: 10px;
+  background: #f3fbfc;
+  color: var(--clinic-primary-dark);
+  line-height: 1.15;
+}
+
+.activity-date-tile span {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.activity-date-tile strong {
+  font-size: 1.2rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.activity-date-doctor {
+  border-color: #d5eee5;
+  background: #f3fbf7;
+  color: #13734e;
+}
+
+.list-group-item {
+  border-color: #edf1f4;
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+.btn {
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(var(--clinic-primary-rgb), 0.25);
+}
+
+.btn-primary {
+  background-color: var(--clinic-primary);
+  border-color: var(--clinic-primary);
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: var(--clinic-primary-dark);
+  border-color: var(--clinic-primary-dark);
+}
+
+.btn-outline-primary {
+  color: var(--clinic-primary);
+  border-color: var(--clinic-primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--clinic-primary);
+  border-color: var(--clinic-primary);
+  color: #fff;
+}
+
+/* ============================================
+   Forms
+   ============================================ */
+.form-control,
+.form-select {
+  border-radius: var(--radius-sm);
+  border-color: var(--clinic-border);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--clinic-primary);
+  box-shadow: 0 0 0 3px rgba(var(--clinic-primary-rgb), 0.15);
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: var(--clinic-text-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.input-group-text {
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  border-color: var(--clinic-border);
+}
+
+/* ============================================
+   Tables
+   ============================================ */
+.table {
+  --bs-table-hover-bg: rgba(var(--clinic-primary-rgb), 0.03);
+  font-size: 0.9rem;
+}
+
+.table thead th {
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: var(--clinic-text-secondary);
+  border-bottom-width: 1px;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+
+.table tbody td {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  vertical-align: middle;
+}
+
+/* ============================================
+   Slot Selection Grid (Booking)
+   ============================================ */
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+  gap: 8px;
+}
+
+.slot-btn {
+  padding: 8px 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--clinic-border);
+  background-color: var(--clinic-surface);
+  color: var(--clinic-text);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.slot-btn:hover:not(:disabled) {
+  border-color: var(--clinic-primary);
+  color: var(--clinic-primary);
+  background-color: var(--clinic-primary-light);
+}
+
+.slot-btn.selected {
+  border-color: var(--clinic-primary);
+  background-color: var(--clinic-primary);
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(var(--clinic-primary-rgb), 0.3);
+}
+
+.slot-btn:disabled {
+  background-color: #f1f5f9;
+  color: var(--clinic-text-muted);
+  border-color: var(--clinic-border);
+  text-decoration: line-through;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* ============================================
+   Status Badges
+   ============================================ */
+.badge-scheduled {
+  background-color: var(--clinic-info-bg);
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+.badge-completed {
+  background-color: var(--clinic-success-bg);
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.badge-cancelled {
+  background-color: var(--clinic-danger-bg);
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+/* ============================================
+   Page Headers
+   ============================================ */
+.page-header {
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--clinic-border);
+}
+
+.page-header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.page-header p {
+  color: var(--clinic-text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* ============================================
+   Empty States
+   ============================================ */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background-color: var(--clinic-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--clinic-border);
+}
+
+.empty-state .empty-icon {
+  font-size: 3rem;
+  color: var(--clinic-text-muted);
+  margin-bottom: 1rem;
+}
+
+.empty-state h5 {
+  color: var(--clinic-text-secondary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+  color: var(--clinic-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* ============================================
+   Modals
+   ============================================ */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(15, 23, 42, 0.5);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  border-radius: var(--radius-lg) !important;
+  border: none;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--clinic-border);
+  padding: 1rem 1.25rem;
+}
+
+.modal-footer {
+  border-top: 1px solid var(--clinic-border);
+  background-color: #f8fafc;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+/* ============================================
+   Navigation Pills (filter tabs)
+   ============================================ */
+.nav-pills .nav-link {
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--clinic-text-secondary);
+  padding: 0.4rem 0.9rem;
+}
+
+.nav-pills .nav-link:hover:not(.active) {
+  background-color: var(--clinic-bg);
+  color: var(--clinic-text);
+}
+
+.nav-pills .nav-link.active {
+  background-color: var(--clinic-primary) !important;
+  color: #fff !important;
+}
+
+/* ============================================
+   Alerts
+   ============================================ */
+.alert {
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+footer {
+  margin-top: auto;
+  background-color: var(--clinic-surface);
+  border-top: 1px solid var(--clinic-border);
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+.hero-section {
+  background: linear-gradient(135deg, var(--clinic-primary-light) 0%, #f0fdfa 50%, var(--clinic-bg) 100%);
+  border: 1px solid var(--clinic-border);
+  border-radius: var(--radius-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  background: rgba(var(--clinic-primary-rgb), 0.06);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ============================================
+   Portal Badge
+   ============================================ */
+.portal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 768px) {
+  .page-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .slot-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+
+  .table {
+    font-size: 0.82rem;
+  }
+
+  .hero-section::before {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+}
+
+/* ============================================
+   Utility: Completed/Cancelled row dimming
+   ============================================ */
+.row-completed {
+  opacity: 0.7;
+}
+
+.row-cancelled {
+  opacity: 0.55;
+}
+
+/* ============================================
+   Scrollbar (subtle)
+   ============================================ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 3px;
+}
+
+/* ============================================
+   Focus visible for accessibility
+   ============================================ */
+:focus-visible {
+  outline: 2px solid var(--clinic-primary);
+  outline-offset: 2px;
+}
+
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ============================================
+   Healthcare Date Input & Ordinal Superscript
+   ============================================ */
+.date-superscript {
+  display: inline-flex;
+  align-items: baseline;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.date-ordinal,
+.date-ordinal-sup {
+  font-size: 0.68em;
+  font-weight: 700;
+  top: -0.42em;
+  position: relative;
+  vertical-align: baseline;
+  margin-left: 1px;
+  color: inherit;
+  opacity: 0.85;
+}
+
+.clinic-date-input-group {
+  position: relative;
+}
+
+.visually-hidden-date-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.clinic-date-display-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--clinic-surface);
+  border: 1.5px solid var(--clinic-border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--shadow-xs);
+  user-select: none;
+}
+
+.clinic-date-display-box:hover:not(.disabled) {
+  border-color: var(--clinic-primary);
+  background-color: #fbfdfd;
+  box-shadow: 0 0 0 3px rgba(var(--clinic-primary-rgb), 0.08);
+}
+
+.clinic-date-display-box:focus-visible {
+  outline: none;
+  border-color: var(--clinic-primary);
+  box-shadow: 0 0 0 3px rgba(var(--clinic-primary-rgb), 0.2);
+}
+
+.clinic-date-display-box.disabled {
+  background-color: #f1f5f9;
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.date-icon-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--clinic-primary-light);
+  color: var(--clinic-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.clinic-date-display-box:hover:not(.disabled) .date-icon-badge {
+  background: var(--clinic-primary);
+  color: #ffffff;
+}
+
+.date-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-sublabel {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--clinic-text-muted);
+  line-height: 1.2;
+}
+
+.date-primary-value {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--clinic-text);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.formatted-date-label {
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+.change-date-btn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+.quick-chip {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  background-color: var(--clinic-surface);
+  border: 1px solid var(--clinic-border);
+  color: var(--clinic-text-secondary);
+  transition: all 0.15s ease;
+}
+
+.quick-chip:hover:not(:disabled) {
+  border-color: var(--clinic-primary);
+  color: var(--clinic-primary);
+  background-color: var(--clinic-primary-light);
+}
+
+.quick-chip.active {
+  background-color: var(--clinic-primary);
+  border-color: var(--clinic-primary);
+  color: #ffffff;
+  font-weight: 600;
+}
+
